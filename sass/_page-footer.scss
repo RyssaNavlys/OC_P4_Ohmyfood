@@ -1,0 +1,19 @@
+
+.page-footer {
+    background: $color-dark-grey;
+    padding: 20px;
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 7px;
+    &__logo {
+        filter: invert(1);
+        height: 24px;
+        margin-bottom: 9px;
+    }
+    &__link {
+        &__icon {
+            width: 30px;
+        }
+    }
+}

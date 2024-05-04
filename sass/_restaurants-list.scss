@@ -1,0 +1,53 @@
+
+.restaurants-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    &__title {
+        margin-bottom: 30px;
+    }
+    &__card {
+        display: grid;
+        grid-template-columns: 1fr 100px;
+        &__new {
+            grid-row: 1 / span 1;
+            grid-column: 2 / span 1;
+            margin: 10px 10px 0 0;
+            background: $color-light-green;
+            color: $color-dark-green;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+            padding: 7px 9px;
+            border-radius: 2px;
+            z-index: 20;
+        }
+        &__img {
+            grid-row: 1 / span 2;
+            grid-column: 1/span 2;
+            object-fit: cover;
+            width: 100%;
+            height: 200px;
+            z-index: 10;
+        }
+        &__title {
+            grid-column: 1 / span 1;
+            margin: 10px 0 0 10px;
+        }
+        &__location {
+            margin: 0 0 10px 10px;
+            grid-column: 1 / span 1;
+            font-size: 17px;
+        }
+        &__favicon {
+            align-self: center;
+            text-align: center;
+            font-size: 21px;
+            grid-row: 3 / span 2;
+            grid-column: 2 / span 1;
+            &:hover {
+                background: linear-gradient(to botton,$color-purple,$color-pink);
+            }
+        }
+    }
+}

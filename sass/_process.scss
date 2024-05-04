@@ -1,0 +1,37 @@
+.process {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 100%;
+    &__button {
+        border: 0;
+        background: none;
+        display: flex;
+        align-items: center;
+        justify-content: stretch;
+        &__number {
+            width: 24px; height: 24px;
+            line-height: 24px;
+            background-color: $color-purple;
+            border-radius: 50%;
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 14px;
+            margin-right: -12px;
+            z-index: 2;
+        }
+        &__description {
+            text-align: left;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            padding: 20px 30px;
+            font-size: 16px;
+            font-weight: 500;
+            flex: 1;
+            &__icon {
+                margin-right: 30px;
+                color: #7e7e7e;
+                font-size: 19px;
+            }
+        }
+    } 
+}

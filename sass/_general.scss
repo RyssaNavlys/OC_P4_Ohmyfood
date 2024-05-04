@@ -1,0 +1,56 @@
+// Globals
+body {
+    margin: 0;
+}
+body * {
+    font-family: 'Roboto', sans;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+// module section
+section.main-section {
+    padding: 50px 20px;
+}
+h2.section-title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+// module button
+.btn {
+    line-height: 50px;
+    padding: 0 19px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    background: linear-gradient(to top, $color-purple, $color-pink);
+    border-radius: 25px;
+    border: 0;
+    &:hover {
+        background: linear-gradient(to top, lighten($color-purple,7%), lighten($color-pink,7%));
+    }
+}
+
+// module card
+.card {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    &__title {
+        font-size: 18px;
+        font-weight: 700;
+    }
+    &__subtitle {
+        font-size: 15px;
+        font-weight: 300;
+    }
+}
+
+// background section
+.bg-grey {
+    background-color: $color-light-grey;
+}
