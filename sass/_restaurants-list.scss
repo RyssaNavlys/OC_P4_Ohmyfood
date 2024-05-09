@@ -42,11 +42,10 @@
         &__favicon {
             align-self: center;
             text-align: center;
-            font-size: 21px;
             grid-row: 3 / span 2;
             grid-column: 2 / span 1;
-            &:hover {
-                background: linear-gradient(to botton,$color-purple,$color-pink);
+            svg {
+                height: 30px;
             }
         }
     }

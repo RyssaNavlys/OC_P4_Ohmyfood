@@ -1,0 +1,45 @@
+// animation to show onload
+
+.loader {
+    position: fixed;
+    z-index: 9000;
+    top: 0;
+    width: 100%; height: 100vh;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        &__card {
+            padding: 0 0 0 30px;
+            display: grid;
+            grid-template-columns: auto 60px;
+            &__title {
+                padding: 20px;
+                margin: 0;
+                align-self: center;
+            }
+            &__checked {
+                color: #ffffff;
+                font-size: 40px;
+                margin: 0;
+                width: 60px; height: 100%;
+                background-color: $color-light-green;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &--entree {
+
+            }
+            &--plat {
+
+            }
+            &--dessert {
+
+            }
+        }
+    }
+}

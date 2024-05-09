@@ -1,0 +1,390 @@
+#svg-lin-grad .heart-icon__lin-grad__top {
+  stop-color: #9356DC;
+}
+#svg-lin-grad .heart-icon__lin-grad__bottom {
+  stop-color: #FF79DA;
+}
+
+.heart-icon__heart {
+  fill: #ffffff;
+  stroke-width: 3;
+}
+.heart-icon__heart:hover {
+  cursor: pointer;
+}
+.heart-icon__heart:hover + .heart-icon__heart-bg {
+  transform: translateY(0%);
+  cursor: pointer;
+}
+.heart-icon__heart--bg-grey {
+  fill: #F6F6F6;
+}
+.heart-icon__heart-bg {
+  fill: url("#svg-lin-grad");
+  transform: translateY(-80%);
+  transition: ease 0.3s;
+}
+.heart-icon__heart-bg:hover {
+  transform: translateY(0%);
+  cursor: pointer;
+}
+.heart-icon__heart-around {
+  fill: #ffffff;
+}
+.heart-icon__heart-around--bg-grey {
+  fill: #F6F6F6;
+}
+
+body {
+  margin: 0;
+}
+
+body * {
+  font-family: "Roboto", sans;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section.main-section {
+  padding: 50px 20px;
+}
+
+h2.section-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.btn {
+  line-height: 50px;
+  padding: 0 19px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  transition: ease 0.3s;
+  border-radius: 25px;
+  border: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+.btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.card__title {
+  font-size: 18px;
+  font-weight: 500;
+}
+.card__subtitle {
+  font-size: 15px;
+  font-weight: 300;
+}
+.card--shadow {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.bg-grey {
+  background-color: #F6F6F6;
+}
+
+.loader {
+  position: fixed;
+  z-index: 9000;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader__content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.loader__content__card {
+  padding: 0 0 0 30px;
+  display: grid;
+  grid-template-columns: auto 60px;
+}
+.loader__content__card__title {
+  padding: 20px;
+  margin: 0;
+  align-self: center;
+}
+.loader__content__card__checked {
+  color: #ffffff;
+  font-size: 40px;
+  margin: 0;
+  width: 60px;
+  height: 100%;
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-header {
+  text-align: center;
+  background: #EAEAEA;
+}
+.page-header__banner {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  background: #ffffff;
+}
+.page-header__banner__previous-link {
+  font-size: 30px;
+  line-height: 64px;
+  position: absolute;
+  left: 20px;
+}
+.page-header__banner__logo {
+  height: 36px;
+  margin: 14px;
+}
+.page-header__banner__title {
+  display: none;
+}
+.page-header__location {
+  margin: 0;
+  font-weight: 500;
+  line-height: 50px;
+  height: 50px;
+  color: #353535;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.page-header__location__icon {
+  margin-right: 17px;
+}
+
+.cta-explore {
+  text-align: center;
+}
+.cta-explore__description {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.process {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 100%;
+}
+.process__button {
+  border: 0;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+}
+.process__button__number {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  background-color: #9356DC;
+  border-radius: 50%;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 14px;
+  margin-right: -12px;
+  z-index: 2;
+}
+.process__button__description {
+  text-align: left;
+  border-radius: 20px;
+  padding: 20px 30px;
+  font-size: 16px;
+  font-weight: 500;
+  flex: 1;
+}
+.process__button__description__icon {
+  margin-right: 30px;
+  color: #7e7e7e;
+  font-size: 19px;
+}
+
+.restaurants-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+.restaurants-list__title {
+  margin-bottom: 30px;
+}
+.restaurants-list__card {
+  display: grid;
+  grid-template-columns: 1fr 100px;
+}
+.restaurants-list__card__new {
+  grid-row: 1/span 1;
+  grid-column: 2/span 1;
+  margin: 10px 10px 0 0;
+  background: #99E2D0;
+  color: #008766;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  padding: 7px 9px;
+  border-radius: 2px;
+  z-index: 20;
+}
+.restaurants-list__card__img {
+  grid-row: 1/span 2;
+  grid-column: 1/span 2;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 200px;
+  z-index: 10;
+}
+.restaurants-list__card__title {
+  grid-column: 1/span 1;
+  margin: 10px 0 0 10px;
+}
+.restaurants-list__card__location {
+  margin: 0 0 10px 10px;
+  grid-column: 1/span 1;
+  font-size: 17px;
+}
+.restaurants-list__card__favicon {
+  align-self: center;
+  text-align: center;
+  grid-row: 3/span 2;
+  grid-column: 2/span 1;
+}
+.restaurants-list__card__favicon svg {
+  height: 30px;
+}
+
+.page-footer {
+  background: #353535;
+  padding: 20px;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 7px;
+}
+.page-footer__logo {
+  filter: invert(1);
+  height: 24px;
+  margin-bottom: 9px;
+}
+.page-footer__link__icon {
+  width: 30px;
+}
+
+.restaurant__header {
+  background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-size: cover;
+  background-position: center center;
+  padding-top: 275px;
+}
+.restaurant__header__cover {
+  display: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 275px;
+  width: 100%;
+  overflow: hidden;
+}
+.restaurant__header__title {
+  border-radius: 40px 40px 0 0;
+  padding: 40px 17px 0 17px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Shrikhand";
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 400;
+}
+.restaurant__header__title__favicon {
+  margin-right: 10px;
+}
+.restaurant__header__title__favicon svg {
+  height: 35px;
+}
+.restaurant__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 10px;
+}
+.restaurant__menu__part {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.restaurant__menu__part__title {
+  padding-bottom: 5px;
+  margin: 0;
+  border-bottom: 3px solid #99E2D0;
+  max-width: 40px;
+  overflow: visible;
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.restaurant__menu__part__receipe {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr min-content;
+  padding: 15px;
+  box-sizing: border-box;
+  gap: 5px;
+}
+.restaurant__menu__part__receipe__title {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.restaurant__menu__part__receipe__subtitle {
+  grid-row: 2/span 1;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.restaurant__menu__part__receipe__price-and-checked {
+  grid-column: 2/span 1;
+  grid-row: 1/span 2;
+  display: grid;
+  gap: 5px;
+  width: 30px;
+  grid-template-columns: 30px 60px;
+  grid-template-rows: 1fr 1fr;
+  transition: ease 0.3s;
+}
+.restaurant__menu__part__receipe__price-and-checked__price {
+  margin: 0;
+  grid-row: 2/span 1;
+}
+.restaurant__menu__part__receipe__price-and-checked__checked {
+  grid-column: 2/span 1;
+  grid-row: 1/span 2;
+  transition: ease 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  margin: -15px -15px -15px 15px;
+}
+.restaurant__menu__part__receipe__price-and-checked__checked__icon {
+  color: #ffffff;
+  font-size: 20px;
+}
+.restaurant__menu__part__receipe:hover > .restaurant__menu__part__receipe__price-and-checked {
+  width: 90px;
+}
+.restaurant__menu__btn {
+  align-self: center;
+}/*# sourceMappingURL=main.css.map */

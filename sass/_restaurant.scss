@@ -1,25 +1,118 @@
+// show each part one per one
+
+@mixin show-with-delay($delay) {
+    @keyframes show {
+    }
+}
+
 
 .restaurant {
-    &__cover {
-        object-fit: cover;
-        height: 275px;
-        width: 100%;
-    }
     &__header {
-        border-radius: 40px 40px 0 0;
-        display: flex;
-        justify-content: space-between;
+        background-image: url('../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg');
+        background-size: cover;
+        background-position: center center;
+        padding-top: 275px;
+        &__cover {
+            display: none;
+            object-fit: cover;
+            height: 275px;
+            width: 100%;
+            overflow: hidden;
+        }
         &__title {
-            font-family: fantasy;
+            border-radius: 40px 40px 0 0;
+            padding: 40px 17px 0 17px; margin: 0;
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Shrikhand';
             font-size: 28px;
             font-style: italic;
             font-weight: 400;
-        }
-        &__favicon {
-            margin-right: 10px;
+            &__favicon {
+                margin-right: 10px;
+                svg {
+                    height: 35px;
+                }
+            }
         }
     }
     &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px 10px;
+        &__part {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            &__title {
+                padding-bottom: 5px;
+                margin: 0;
+                border-bottom: 3px solid $color-light-green;
+                max-width: 40px;
+                overflow: visible;
+                font-size: 16px;
+                font-weight: 300;
+                text-transform: uppercase;
 
+            }
+            &__receipe {
+                display: grid;
+                grid-template-rows: repeat(2, 1fr);
+                grid-template-columns: 1fr min-content;
+                padding: 15px;
+                box-sizing: border-box;
+                gap: 5px;
+                &__title {
+                    margin: 0;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                &__subtitle {
+                    grid-row: 2 / span 1;
+                    margin: 0;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                &__price-and-checked {
+                    grid-column: 2/ span 1;
+                    grid-row: 1 / span 2;
+                    display: grid;
+                    gap: 5px;
+                    width: 30px;
+                    grid-template-columns: 30px 60px;
+                    grid-template-rows: 1fr 1fr;
+                    transition: ease 0.3s;
+                    &__price {
+                        margin: 0;
+                        grid-row: 2 / span 1;
+                    }
+                    &__checked {
+                        grid-column: 2 / span 1;
+                        grid-row: 1 / span 2;
+                        transition: ease 0.3s;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: $color-light-green;
+                        margin: -15px -15px -15px 15px;
+                        &__icon {
+                            color: #ffffff;
+                            font-size: 20px;
+                        }
+                    }
+                }
+                &:hover > &__price-and-checked {
+                    width: 90px;
+                }
+                &:hover > &__price {
+                }
+            }
+        }
+        &__btn {
+            align-self: center;
+        }
     }
 }

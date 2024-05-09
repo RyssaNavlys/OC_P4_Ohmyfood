@@ -5,20 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ohmyfood</title>
-    <!-- load font Raleway with weight 400 (normal), 500 and 700 (bold) -->
+    <!-- load font Roboto + shrikhand with weight 400 (normal), 500 and 700 (bold) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
 
     <!-- load font-awesome to display icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <!-- main css in this project -->
-    <link rel="stylesheet" href="./sass/main.css">
+    <link rel="stylesheet" href="./assets/styles/main.css">
 </head>
 
 <body>
+<!--
+    <svg class='heart-icon' width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient class="heart-icon__lin-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop class='grad-0' offset="0%" />
+              <stop class='grad-100' offset="100%" />
+            </linearGradient>
+        </defs>
+        <path class='heart-icon__heart' fill-rule="evenodd" clip-rule="evenodd" d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+        <path class='heart-icon__heart-bg' fill-rule="evenodd" clip-rule="evenodd" d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="red" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/>
+        <path class='heart-icon__heart-around' fill="red" fill-rule="evenodd" clip-rule="evenodd" d="M0 0 0 24 24 24 24 0 0 0 12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="blue" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    
+    <svg class='heart-icon' width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="svg-lin-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop class='heart-icon__lin-grad__top' offset="0%" />
+              <stop class='heart-icon__lin-grad__bottom' offset="100%" />
+            </linearGradient>
+        </defs>
+        <path class='heart-icon__heart' fill-rule="evenodd" clip-rule="evenodd" d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+        <path class='heart-icon__heart-bg' fill-rule="evenodd" clip-rule="evenodd" d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="red" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/>
+        <path class='heart-icon__heart-around' fill="red" fill-rule="evenodd" clip-rule="evenodd" d="M0 0 0 24 24 24 24 0 0 0 12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="blue" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+-->
+
+    <aside class="loader bg-grey">
+        <div class="loader__content">
+            <article class="card card--shadow loader__content__card loader__content__card--entree">
+                <h2 class="card__title loader__content__card__title">Préparation de l'entrée</h2>
+                <p class="loader__content__card__checked"><i class="fa-solid fa-circle-check"></i></p>
+            </article>
+            <article class="card card--shadow loader__content__card loader__content__card--plat">
+                <h2 class="card__title loader__content__card__title">Assaisonnement du plat</h2>
+                <p class="loader__content__card__checked"><i class="fa-solid fa-circle-check"></i></p>
+            </article>
+            <article class="card card--shadow loader__content__card loader__content__card--dessert">
+                <h2 class="card__title loader__content__card__title">Dressage du dessert</h2>
+                <p class="loader__content__card__checked"><i class="fa-solid fa-circle-check"></i></p>
+            </article>
+        </div>
+    </aside>
 
     <header class="page-header">
         <div class="page-header__banner">
@@ -38,9 +81,9 @@
 
         <section class="main-section process">
             <h2 class="section-title process__title">Fonctionnement</h2>
-            <button class="process__button"><span class="process__button__number">1</span><span class='process__button__description bg-grey'><i class="fa-solid fa-mobile-screen-button process__button__description__icon"></i>Choisissez un restaurant</span></button>
-            <button class="process__button"><span class="process__button__number">2</span><span class='process__button__description bg-grey'><i class="fa-solid fa-list-ul process__button__description__icon"></i>Composez votre menu</span></button>
-            <button class="process__button"><span class="process__button__number">3</span><span class='process__button__description bg-grey'><i class="fa-solid fa-store process__button__description__icon"></i>Dégustez au restaurant</span></button>
+            <button class="process__button"><span class="process__button__number">1</span><span class='process__button__description bg-grey card--shadow'><i class="fa-solid fa-mobile-screen-button process__button__description__icon"></i>Choisissez un restaurant</span></button>
+            <button class="process__button"><span class="process__button__number">2</span><span class='process__button__description bg-grey card--shadow'><i class="fa-solid fa-list-ul process__button__description__icon"></i>Composez votre menu</span></button>
+            <button class="process__button"><span class="process__button__number">3</span><span class='process__button__description bg-grey card--shadow'><i class="fa-solid fa-store process__button__description__icon"></i>Dégustez au restaurant</span></button>
         </section>
 
         <section class="main-section bg-grey restaurants-list">
@@ -52,7 +95,19 @@
                 <img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" title="Photo de l'intérieur du restaurant 'la palette du goût'" class="restaurants-list__card__img">
                 <h3 class="card__title restaurants-list__card__title">La palette du goût</h3>
                 <p class="card__subtitle restaurants-list__card__location">Ménilmontant</p>
-                <i class="fa-regular fa-heart restaurants-list__card__favicon"></i>
+                <div class="restaurants-list__card__favicon">
+                    <svg class='heart-icon' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="svg-lin-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop class='heart-icon__lin-grad__top' offset="0%" />
+                            <stop class='heart-icon__lin-grad__bottom' offset="100%" />
+                            </linearGradient>
+                        </defs>
+                        <path class='heart-icon__heart' fill-rule="evenodd" clip-rule="evenodd" d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path class='heart-icon__heart-bg' fill-rule="evenodd" clip-rule="evenodd" d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="red" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path class='heart-icon__heart-around' fill="red" fill-rule="evenodd" clip-rule="evenodd" d="M0 0 0 24 24 24 24 0 0 0 12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="blue" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
             </article>
             </a>
 
@@ -62,7 +117,19 @@
                 <img src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" title="Photo de l'intérieur du restaurant 'la note enchantée'" class="restaurants-list__card__img">
                 <h3 class="card__title restaurants-list__card__title">La note enchantée</h3>
                 <p class="card__subtitle restaurants-list__card__location">Charonne</p>
-                <i class="fa-regular fa-heart restaurants-list__card__favicon"></i>
+                <div class="restaurants-list__card__favicon">
+                    <svg class='heart-icon' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="svg-lin-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop class='heart-icon__lin-grad__top' offset="0%" />
+                            <stop class='heart-icon__lin-grad__bottom' offset="100%" />
+                            </linearGradient>
+                        </defs>
+                        <path class='heart-icon__heart' fill-rule="evenodd" clip-rule="evenodd" d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path class='heart-icon__heart-bg' fill-rule="evenodd" clip-rule="evenodd" d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="red" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path class='heart-icon__heart-around' fill="red" fill-rule="evenodd" clip-rule="evenodd" d="M0 0 0 24 24 24 24 0 0 0 12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="blue" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
             </article>
             </a>
 
@@ -71,7 +138,19 @@
                 <img src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" title="Photo de l'intérieur du restaurant 'À la française'" class="restaurants-list__card__img">
                 <h3 class="card__title restaurants-list__card__title">À la française</h3>
                 <p class="card__subtitle restaurants-list__card__location">Ménilmontant</p>
-                <i class="fa-regular fa-heart restaurants-list__card__favicon"></i>
+                <div class="restaurants-list__card__favicon">
+                    <svg class='heart-icon' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="svg-lin-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop class='heart-icon__lin-grad__top' offset="0%" />
+                            <stop class='heart-icon__lin-grad__bottom' offset="100%" />
+                            </linearGradient>
+                        </defs>
+                        <path class='heart-icon__heart' fill-rule="evenodd" clip-rule="evenodd" d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path class='heart-icon__heart-bg' fill-rule="evenodd" clip-rule="evenodd" d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="red" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path class='heart-icon__heart-around' fill="red" fill-rule="evenodd" clip-rule="evenodd" d="M0 0 0 24 24 24 24 0 0 0 12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="blue" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
             </article>
             </a>
 
@@ -80,7 +159,19 @@
                 <img src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" title="Photo de l'intérieur du restaurant 'Le délice des sens'" class="restaurants-list__card__img">
                 <h3 class="card__title restaurants-list__card__title">Le délice des sens</h3>
                 <p class="card__subtitle restaurants-list__card__location">Folie-Méricourt</p>
-                <i class="fa-regular fa-heart restaurants-list__card__favicon"></i>
+                <div class="restaurants-list__card__favicon">
+                    <svg class='heart-icon' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="svg-lin-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop class='heart-icon__lin-grad__top' offset="0%" />
+                            <stop class='heart-icon__lin-grad__bottom' offset="100%" />
+                            </linearGradient>
+                        </defs>
+                        <path class='heart-icon__heart' fill-rule="evenodd" clip-rule="evenodd" d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path class='heart-icon__heart-bg' fill-rule="evenodd" clip-rule="evenodd" d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="red" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path class='heart-icon__heart-around' fill="red" fill-rule="evenodd" clip-rule="evenodd" d="M0 0 0 24 24 24 24 0 0 0 12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="blue" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
             </article>
             </a>
 

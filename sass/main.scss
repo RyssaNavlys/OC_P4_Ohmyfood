@@ -1,8 +1,13 @@
 // Main vars and mixins
 @import 'vars';
+// SVG
+@import 'svg';
 
 // general & modules
 @import 'general';
+
+// loader
+@import 'loader';
 
 // <header> page-header
 @import 'page-header';
