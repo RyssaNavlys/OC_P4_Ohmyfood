@@ -96,25 +96,86 @@ h2.section-title {
   background-color: #F6F6F6;
 }
 
+@keyframes loader-end {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes loader-bg-appear {
+  0% {
+    transform-origin: 0 0;
+    transform: scaleY(0) scaleX(1);
+  }
+  50% {
+    transform: scaleY(1) scaleX(0.5);
+    transform-origin: bottom;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0) scaleX(1);
+    opacity: 0;
+  }
+}
+@keyframes loader-card-appear {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  90% {
+    animation-timing-function: ease-out;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 .loader {
   position: fixed;
-  z-index: 9000;
+  z-index: 1000;
   top: 0;
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: loader-end 0.6s 3s;
+  animation-fill-mode: both;
 }
 .loader__content {
+  position: relative;
+  z-index: 1020;
   display: flex;
   flex-direction: column;
   gap: 30px;
+  padding: 50px;
+}
+.loader__content::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: #99E2D0;
+  animation: loader-bg-appear 2s 0.5ms ease-in-out;
+  animation-fill-mode: both;
 }
 .loader__content__card {
   padding: 0 0 0 30px;
   display: grid;
   grid-template-columns: auto 60px;
+  animation-fill-mode: both;
 }
 .loader__content__card__title {
   padding: 20px;
@@ -132,6 +193,19 @@ h2.section-title {
   justify-content: center;
   align-items: center;
 }
+.loader__content__card--entree {
+  animation: loader-card-appear 0.6s 0.6s;
+  animation-fill-mode: both;
+}
+.loader__content__card--plat {
+  animation: loader-card-appear 0.6s 1.2s;
+  animation-fill-mode: both;
+}
+.loader__content__card--dessert {
+  animation: loader-card-appear 0.6s 1.8s;
+  animation-fill-mode: both;
+}
+
 .page-header {
   text-align: center;
   background: #EAEAEA;
@@ -281,6 +355,14 @@ h2.section-title {
   width: 30px;
 }
 
+@keyframes show-menu-part {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .restaurant__header {
   background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
   background-size: cover;
@@ -322,6 +404,17 @@ h2.section-title {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  animation: show-menu-part 0.5s ease-out;
+  animation-fill-mode: both;
+}
+.restaurant__menu__part--entrees {
+  animation-delay: 0.5s;
+}
+.restaurant__menu__part--plats {
+  animation-delay: 1s;
+}
+.restaurant__menu__part--desserts {
+  animation-delay: 1.5s;
 }
 .restaurant__menu__part__title {
   padding-bottom: 5px;

@@ -1,7 +1,11 @@
 // show each part one per one
 
-@mixin show-with-delay($delay) {
-    @keyframes show {
+@keyframes show-menu-part {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
@@ -45,6 +49,17 @@
             display: flex;
             flex-direction: column;
             gap: 12px;
+            animation: show-menu-part 0.5s ease-out;
+            animation-fill-mode: both;
+            &--entrees {
+                animation-delay: 0.5s;
+            }
+            &--plats {
+                animation-delay: 1s;
+            }
+            &--desserts {
+                animation-delay: 1.5s;
+            }
             &__title {
                 padding-bottom: 5px;
                 margin: 0;
