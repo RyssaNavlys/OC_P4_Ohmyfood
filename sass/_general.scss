@@ -4,6 +4,7 @@ body {
 }
 body * {
     font-family: 'Roboto', sans;
+    box-sizing: border-box;
 }
 a {
     text-decoration: none;
@@ -14,7 +15,7 @@ a {
 section.main-section {
     padding: 50px 20px;
 }
-h2.section-title {
+.section-title {
     margin: 0;
     font-size: 24px;
     font-weight: 700;

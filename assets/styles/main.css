@@ -41,6 +41,7 @@ body {
 
 body * {
   font-family: "Roboto", sans;
+  box-sizing: border-box;
 }
 
 a {
@@ -52,7 +53,7 @@ section.main-section {
   padding: 50px 20px;
 }
 
-h2.section-title {
+.section-title {
   margin: 0;
   font-size: 24px;
   font-weight: 700;
@@ -144,7 +145,7 @@ h2.section-title {
   top: 0;
   width: 100%;
   height: 100vh;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   animation: loader-end 0.6s 3s;
@@ -213,19 +214,32 @@ h2.section-title {
 .page-header__banner {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+}
+@media screen and (min-width: 767px) {
+  .page-header__banner {
+    height: 100px;
+  }
 }
 .page-header__banner__previous-link {
   font-size: 30px;
-  line-height: 64px;
   position: absolute;
   left: 20px;
 }
 .page-header__banner__logo {
   height: 36px;
-  margin: 14px;
+  margin: auto;
 }
 .page-header__banner__title {
   display: none;
+}
+@media screen and (min-width: 767px) {
+  .page-header__banner {
+    box-shadow: unset;
+  }
 }
 .page-header__location {
   margin: 0;
@@ -238,9 +252,19 @@ h2.section-title {
 .page-header__location__icon {
   margin-right: 17px;
 }
+@media screen and (min-width: 767px) {
+  .page-header__location {
+    box-shadow: unset;
+  }
+}
 
 .cta-explore {
   text-align: center;
+}
+@media screen and (min-width: 767px) {
+  .cta-explore__title {
+    font-size: 40px;
+  }
 }
 .cta-explore__description {
   font-size: 18px;
@@ -252,12 +276,23 @@ h2.section-title {
   gap: 20px;
   grid-template-columns: 100%;
 }
+@media screen and (min-width: 767px) {
+  .process {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 767px) {
+  .process__title {
+    grid-column: 1/span 3;
+  }
+}
 .process__button {
   border: 0;
   background: none;
   display: flex;
   align-items: center;
-  justify-content: stretch;
 }
 .process__button__number {
   width: 24px;
@@ -285,19 +320,32 @@ h2.section-title {
   font-size: 19px;
 }
 
-.restaurants-list {
+.restaurants-list__inner {
   display: grid;
   grid-template-columns: 1fr;
   gap: 18px;
 }
-.restaurants-list__title {
+@media screen and (min-width: 767px) {
+  .restaurants-list__inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 100px;
+  }
+}
+.restaurants-list__inner__title {
   margin-bottom: 30px;
 }
-.restaurants-list__card {
+@media screen and (min-width: 767px) {
+  .restaurants-list__inner__title {
+    grid-column: 1/span 2;
+  }
+}
+.restaurants-list__inner__card {
   display: grid;
   grid-template-columns: 1fr 100px;
 }
-.restaurants-list__card__new {
+.restaurants-list__inner__card__new {
   grid-row: 1/span 1;
   grid-column: 2/span 1;
   margin: 10px 10px 0 0;
@@ -310,7 +358,7 @@ h2.section-title {
   border-radius: 2px;
   z-index: 20;
 }
-.restaurants-list__card__img {
+.restaurants-list__inner__card__img {
   grid-row: 1/span 2;
   grid-column: 1/span 2;
   -o-object-fit: cover;
@@ -319,22 +367,22 @@ h2.section-title {
   height: 200px;
   z-index: 10;
 }
-.restaurants-list__card__title {
+.restaurants-list__inner__card__title {
   grid-column: 1/span 1;
   margin: 10px 0 0 10px;
 }
-.restaurants-list__card__location {
+.restaurants-list__inner__card__location {
   margin: 0 0 10px 10px;
   grid-column: 1/span 1;
   font-size: 17px;
 }
-.restaurants-list__card__favicon {
+.restaurants-list__inner__card__favicon {
   align-self: center;
   text-align: center;
   grid-row: 3/span 2;
   grid-column: 2/span 1;
 }
-.restaurants-list__card__favicon svg {
+.restaurants-list__inner__card__favicon svg {
   height: 30px;
 }
 
@@ -346,10 +394,26 @@ h2.section-title {
   grid-template-columns: 1fr;
   gap: 7px;
 }
+@media screen and (min-width: 1023px) {
+  .page-footer {
+    padding: 80px 80px 30px 80px;
+    grid-template-columns: repeat(5, max-content);
+    grid-auto-flow: row dense;
+    justify-content: end;
+    gap: 20px;
+  }
+}
 .page-footer__logo {
   filter: invert(1);
   height: 24px;
   margin-bottom: 9px;
+}
+@media screen and (min-width: 1023px) {
+  .page-footer__logo {
+    grid-column: 5/span 1;
+    margin-left: 50px;
+    margin-bottom: 0;
+  }
 }
 .page-footer__link__icon {
   width: 30px;
@@ -394,11 +458,27 @@ h2.section-title {
 .restaurant__header__title__favicon svg {
   height: 35px;
 }
+@media screen and (min-width: 767px) {
+  .restaurant__header__title {
+    max-width: 1055px;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 30px;
+  }
+}
 .restaurant__menu {
   display: flex;
   flex-direction: column;
   gap: 40px;
   padding: 40px 10px;
+  align-items: center;
+}
+@media screen and (min-width: 767px) {
+  .restaurant__menu {
+    max-width: 1055px;
+    margin: 0 auto;
+    gap: 30px;
+  }
 }
 .restaurant__menu__part {
   display: flex;
@@ -406,6 +486,8 @@ h2.section-title {
   gap: 12px;
   animation: show-menu-part 0.5s ease-out;
   animation-fill-mode: both;
+  width: 100%;
+  max-width: 650px;
 }
 .restaurant__menu__part--entrees {
   animation-delay: 0.5s;

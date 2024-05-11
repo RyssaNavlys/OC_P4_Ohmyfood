@@ -38,6 +38,12 @@
                     height: 35px;
                 }
             }
+            @media screen and (min-width: $breakpoint_mobile) {
+                max-width: 1055px;
+                margin: 0 auto;
+                justify-content: center;
+                gap: 30px;
+            }
         }
     }
     &__menu {
@@ -45,12 +51,22 @@
         flex-direction: column;
         gap: 40px;
         padding: 40px 10px;
+        align-items: center;
+        @media screen and (min-width: $breakpoint_mobile) {
+            max-width: 1055px;
+            margin: 0 auto;
+            gap: 30px;
+        }
         &__part {
             display: flex;
             flex-direction: column;
             gap: 12px;
             animation: show-menu-part 0.5s ease-out;
             animation-fill-mode: both;
+            width: 100%;
+            max-width: 650px;
+            @media screen and (min-width: $breakpoint_mobile) {
+            }
             &--entrees {
                 animation-delay: 0.5s;
             }
@@ -121,8 +137,6 @@
                 }
                 &:hover > &__price-and-checked {
                     width: 90px;
-                }
-                &:hover > &__price {
                 }
             }
         }

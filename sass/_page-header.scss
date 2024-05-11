@@ -6,18 +6,27 @@
     &__banner {
         box-shadow: 0 2px 4px rgba(0,0,0,0.15);
         background: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 64px;
+        @media screen and (min-width: $breakpoint_mobile) {
+            height: 100px;
+        }
         &__previous-link {
             font-size: 30px;
-            line-height: 64px;
             position: absolute;
             left: 20px;
         }
         &__logo {
             height: 36px;
-            margin: 14px;
+            margin: auto;
         }
         &__title {
             display: none;
+        }
+        @media screen and (min-width: $breakpoint_mobile) {
+            box-shadow: unset;
         }
     }
     &__location {
@@ -28,6 +37,9 @@
         box-shadow: 0 4px 4px rgba(0,0,0,0.25);
         &__icon {
             margin-right: 17px;
+        }
+        @media screen and (min-width: $breakpoint_mobile) {
+            box-shadow: unset;
         }
     }
 }

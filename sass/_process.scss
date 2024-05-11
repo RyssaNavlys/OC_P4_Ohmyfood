@@ -2,12 +2,21 @@
     display: grid;
     gap: 20px;
     grid-template-columns: 100%;
+    @media screen and (min-width: $breakpoint_mobile) {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+    &__title {
+        @media screen and (min-width: $breakpoint_mobile) {
+            grid-column: 1 / span 3;
+        }
+    }
     &__button {
         border: 0;
         background: none;
         display: flex;
         align-items: center;
-        justify-content: stretch;
         &__number {
             width: 24px; height: 24px;
             line-height: 24px;

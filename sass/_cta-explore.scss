@@ -1,6 +1,11 @@
 
 .cta-explore {
     text-align: center;
+    &__title {
+        @media screen and (min-width: $breakpoint_mobile) {
+            font-size: 40px;
+        }
+    }
     &__description {
         font-size: 18px;
         font-weight: 300;

@@ -6,10 +6,22 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 7px;
+    @media screen and (min-width: $breakpoint_tablet) {
+        padding: 80px 80px 30px 80px;
+        grid-template-columns: repeat(5, max-content);
+        grid-auto-flow: row dense;
+        justify-content: end;
+        gap: 20px;
+    }
     &__logo {
         filter: invert(1);
         height: 24px;
         margin-bottom: 9px;
+        @media screen and (min-width: $breakpoint_tablet) {
+            grid-column: 5 / span 1;
+            margin-left: 50px;
+            margin-bottom: 0;
+        }
     }
     &__link {
         &__icon {
