@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohmyfood - la note enchantée</title>
+
+    <!-- load font Roboto with weight 400 (normal), 500 and 700 (bold) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+
+    <!-- load font-awesome to display icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- main css in this project -->
+    <link rel="stylesheet" href="../assets/styles/main.css">
+</head>
+
+<body>
+
+    <header class="page-header">
+        <div class="page-header__banner">
+            <a href="../index.html" class="page-header__banner__previous-link"><i class="fa-solid fa-arrow-left"></i></a>
+            <img src="../assets/images/logo/ohmyfood.png" title="Logo de Ohmyfood" class="page-header__banner__logo">
+            <h1 class="page-header__banner__title">Ohmyfood : la note enchantée</h1>
+        </div>
+    </header>
+
+    <main class="restaurant">
+        
+        <header class="restaurant__header">
+            <img src="../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo du restaurant 'à la française'" class="restaurant__header__cover">
+            <h2 class="bg-grey restaurant__header__title">La note enchantée
+                <span class="restaurant__header__title__favicon">
+                    <svg class='heart-icon' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="svg-lin-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop class='heart-icon__lin-grad__top' offset="0%" />
+                            <stop class='heart-icon__lin-grad__bottom' offset="100%" />
+                            </linearGradient>
+                        </defs>
+                        <path class='heart-icon__heart  heart-icon__heart--bg-grey' fill-rule="evenodd" clip-rule="evenodd" d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path class='heart-icon__heart-bg' fill-rule="evenodd" clip-rule="evenodd" d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="red" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path class='heart-icon__heart-around heart-icon__heart-around--bg-grey' fill="red" fill-rule="evenodd" clip-rule="evenodd" d="M0 0 0 24 24 24 24 0 0 0 12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="blue" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+            </h2>
+        </header>
+
+        <div class="bg-grey restaurant__menu">
+
+            <section class="restaurant__menu__part restaurant__menu__part--entrees">
+                <h3 class="restaurant__menu__part__title">Entrées</h3>
+                <article class="card card--shadow restaurant__menu__part__receipe">
+                    <h4 class="card__title restaurant__menu__part__receipe__title">Ravioles de foie gras</h4>
+                    <h5 class="card__subtitle restaurant__menu__part__receipe__subtitle">Accompagnées de leur crème à la truffe</h5>
+                    <div class="restaurant__menu__part__receipe__price-and-checked">
+                        <p class="card__title restaurant__menu__part__receipe__price-and-checked__price">25€</p>
+                        <div class="restaurant__menu__part__receipe__price-and-checked__checked"><i class="fa-solid fa-circle-check restaurant__menu__part__receipe__price-and-checked__checked__icon"></i></div>
+                    </div>
+                </article>
+                <article class="card card--shadow restaurant__menu__part__receipe">
+                    <h4 class="card__title restaurant__menu__part__receipe__title">Caviar osciètre</h4>
+                    <h5 class="card__subtitle restaurant__menu__part__receipe__subtitle">Sur blini à la farine de blé noir</h5>
+                    <div class="restaurant__menu__part__receipe__price-and-checked">
+                        <p class="card__title restaurant__menu__part__receipe__price-and-checked__price">35€</p>
+                        <div class="restaurant__menu__part__receipe__price-and-checked__checked"><i class="fa-solid fa-circle-check restaurant__menu__part__receipe__price-and-checked__checked__icon"></i></div>
+                    </div>
+                </article>
+                <article class="card card--shadow restaurant__menu__part__receipe">
+                    <h4 class="card__title restaurant__menu__part__receipe__title">Homard et espuma de potiron</h4>
+                    <h5 class="card__subtitle restaurant__menu__part__receipe__subtitle">Marinés aux zestes d'orange</h5>
+                    <div class="restaurant__menu__part__receipe__price-and-checked">
+                        <p class="card__title restaurant__menu__part__receipe__price-and-checked__price">20€</p>
+                        <div class="restaurant__menu__part__receipe__price-and-checked__checked"><i class="fa-solid fa-circle-check restaurant__menu__part__receipe__price-and-checked__checked__icon"></i></div>
+                    </div>
+                </article>
+                <article class="card card--shadow restaurant__menu__part__receipe">
+                    <h4 class="card__title restaurant__menu__part__receipe__title">Foie gras de canard cuit entier</h4>
+                    <h5 class="card__subtitle restaurant__menu__part__receipe__subtitle">Confiture de figue et pain toasté</h5>
+                    <div class="restaurant__menu__part__receipe__price-and-checked">
+                        <p class="card__title restaurant__menu__part__receipe__price-and-checked__price">35€</p>
+                        <div class="restaurant__menu__part__receipe__price-and-checked__checked"><i class="fa-solid fa-circle-check restaurant__menu__part__receipe__price-and-checked__checked__icon"></i></div>
+                    </div>
+                </article>
+            </section>
+            
+            <section class="restaurant__menu__part restaurant__menu__part--plats">
+                <h3 class="restaurant__menu__part__title">Plats</h3>
+                <article class="card card--shadow restaurant__menu__part__receipe">
+                    <h4 class="card__title restaurant__menu__part__receipe__title">Noix de coquilles Saint-Jacques</h4>
+                    <h5 class="card__subtitle restaurant__menu__part__receipe__subtitle">Sur lit de purée de céleri-rave</h5>
+                    <div class="restaurant__menu__part__receipe__price-and-checked">
+                        <p class="card__title restaurant__menu__part__receipe__price-and-checked__price">40€</p>
+                        <div class="restaurant__menu__part__receipe__price-and-checked__checked"><i class="fa-solid fa-circle-check restaurant__menu__part__receipe__price-and-checked__checked__icon"></i></div>
+                    </div>
+                </article>
+                <article class="card card--shadow restaurant__menu__part__receipe">
+                    <h4 class="card__title restaurant__menu__part__receipe__title">Langoustine poêlée</h4>
+                    <h5 class="card__subtitle restaurant__menu__part__receipe__subtitle">Purée de patate douce</h5>
+                    <div class="restaurant__menu__part__receipe__price-and-checked">
+                        <p class="card__title restaurant__menu__part__receipe__price-and-checked__price">35€</p>
+                        <div class="restaurant__menu__part__receipe__price-and-checked__checked"><i class="fa-solid fa-circle-check restaurant__menu__part__receipe__price-and-checked__checked__icon"></i></div>
+                    </div>
+                </article>
+                <article class="card card--shadow restaurant__menu__part__receipe">
+                    <h4 class="card__title restaurant__menu__part__receipe__title">Mijoté de queue de bœuf</h4>
+                    <h5 class="card__subtitle restaurant__menu__part__receipe__subtitle">Et riz sauvage aux zestes de citron</h5>
+                    <div class="restaurant__menu__part__receipe__price-and-checked">
+                        <p class="card__title restaurant__menu__part__receipe__price-and-checked__price">44€</p>
+                        <div class="restaurant__menu__part__receipe__price-and-checked__checked"><i class="fa-solid fa-circle-check restaurant__menu__part__receipe__price-and-checked__checked__icon"></i></div>
+                    </div>
+                </article>
+            </section>
+            
+            <section class="restaurant__menu__part restaurant__menu__part--desserts">
+                <h3 class="restaurant__menu__part__title">Dessert</h3>
+                <article class="card card--shadow restaurant__menu__part__receipe">
+                    <h4 class="card__title restaurant__menu__part__receipe__title">Macaron noisette et chocolat</h4>
+                    <h5 class="card__subtitle restaurant__menu__part__receipe__subtitle">Glace au caramel brun et sel de Guérande</h5>
+                    <div class="restaurant__menu__part__receipe__price-and-checked">
+                        <p class="card__title restaurant__menu__part__receipe__price-and-checked__price">18€</p>
+                        <div class="restaurant__menu__part__receipe__price-and-checked__checked"><i class="fa-solid fa-circle-check restaurant__menu__part__receipe__price-and-checked__checked__icon"></i></div>
+                    </div>
+                </article>
+                <article class="card card--shadow restaurant__menu__part__receipe">
+                    <h4 class="card__title restaurant__menu__part__receipe__title">Baba au rhum revisité</h4>
+                    <h5 class="card__subtitle restaurant__menu__part__receipe__subtitle">Avec son coulis de citron</h5>
+                    <div class="restaurant__menu__part__receipe__price-and-checked">
+                        <p class="card__title restaurant__menu__part__receipe__price-and-checked__price">22€</p>
+                        <div class="restaurant__menu__part__receipe__price-and-checked__checked"><i class="fa-solid fa-circle-check restaurant__menu__part__receipe__price-and-checked__checked__icon"></i></div>
+                    </div>
+                </article>
+                <article class="card card--shadow restaurant__menu__part__receipe">
+                    <h4 class="card__title restaurant__menu__part__receipe__title">Tarte au citron meringuée</h4>
+                    <h5 class="card__subtitle restaurant__menu__part__receipe__subtitle">Déstructurée</h5>
+                    <div class="restaurant__menu__part__receipe__price-and-checked">
+                        <p class="card__title restaurant__menu__part__receipe__price-and-checked__price">23€</p>
+                        <div class="restaurant__menu__part__receipe__price-and-checked__checked"><i class="fa-solid fa-circle-check restaurant__menu__part__receipe__price-and-checked__checked__icon"></i></div>
+                    </div>
+                </article>
+            </section>
+
+            <button class="btn restaurant__menu__btn">Commander</button>
+
+        </div>
+
+    </main>
+
+    <footer class="page-footer">
+        <img src="../assets/images/logo/ohmyfood.png" title="logo de Ohmyfood" class="page-footer__logo">
+        <a href="#" class="page-footer__link"><i class="fa-solid fa-utensils page-footer__link__icon"></i>Proposer un restaurant</a>
+        <a href="#" class="page-footer__link"><i class="fa-solid fa-handshake-angle page-footer__link__icon"></i>Devenir partenaire</a>
+        <a href="#" class="page-footer__link">Mentions légales</a>
+        <a href="#" class="page-footer__link">Contact</a>
+    </footer>
+
+    </body>
+
+    </html>
