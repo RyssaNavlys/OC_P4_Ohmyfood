@@ -28,7 +28,7 @@
 }
 @keyframes loader-card-appear {
     0% {
-        opacity: 0;
+        opacity: 0.2;
     }
     80% {
         opacity: 1;
@@ -45,7 +45,7 @@
     }
 }
 
-
+// Loader (cover all screen)
 .loader {
     position: fixed;
     z-index: 1000;
@@ -54,25 +54,26 @@
     display : flex;
     align-items: center;
     justify-content: center;
-    animation: loader-end 0.6s 3s;
+    animation: loader-end 0.6s 3s; // after loader animation : delete loader div
     animation-fill-mode: both;
     &__content {
         position: relative;
-        z-index: 1020;
         display: flex;
         flex-direction: column;
         gap: 30px;
         padding: 50px;
-        &::after {
+        &::after { // green background for animation
             content: '';
             display: block;
             position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            z-index: -1;
+            z-index: 1010;
             background-color: $color-light-green;
-            animation: loader-bg-appear 2s 0.5ms ease-in-out;
+            animation: loader-bg-appear 2s 0.5ms ease-in-out; // animate background
             animation-fill-mode: both;
         }
         &__card {
+            position: relative;
+            z-index: 1020;
             padding: 0 0 0 30px;
             display: grid;
             grid-template-columns: auto 60px;
@@ -93,7 +94,7 @@
                 align-items: center;
             }
             &--entree {
-                animation: loader-card-appear 0.6s 0.6s;
+                animation: loader-card-appear 0.6s 0.6s; // animate each card
                 animation-fill-mode: both;
             }
             &--plat {
