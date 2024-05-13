@@ -1,15 +1,16 @@
-
+// header
+// ######
 
 .page-header {
     text-align: center;
-    background: #EAEAEA;
     &__banner {
         box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-        background: #ffffff;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 64px;
+        position: relative; // needed to display shadow in front of next block
+        z-index: 20;
         @media screen and (min-width: $breakpoint_mobile) {
             height: 100px;
         }
@@ -20,7 +21,6 @@
         }
         &__logo {
             height: 36px;
-            margin: auto;
         }
         &__title {
             display: none;
@@ -34,7 +34,10 @@
         font-weight: 500;
         line-height: 50px; height: 50px;
         color: $color-dark-grey;
+        background: #EAEAEA;
         box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+        position: relative; // needed to display shadow in front of next block
+        z-index: 10;
         &__icon {
             margin-right: 17px;
         }

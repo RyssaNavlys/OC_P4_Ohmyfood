@@ -60,6 +60,7 @@ section.main-section {
 }
 
 .btn {
+  display: inline-block;
   line-height: 50px;
   padding: 0 19px;
   color: #ffffff;
@@ -125,7 +126,7 @@ section.main-section {
 }
 @keyframes loader-card-appear {
   0% {
-    opacity: 0;
+    opacity: 0.2;
   }
   80% {
     opacity: 1;
@@ -153,7 +154,6 @@ section.main-section {
 }
 .loader__content {
   position: relative;
-  z-index: 1020;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -167,12 +167,14 @@ section.main-section {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -1;
+  z-index: 1010;
   background-color: #99E2D0;
   animation: loader-bg-appear 2s 0.5ms ease-in-out;
   animation-fill-mode: both;
 }
 .loader__content__card {
+  position: relative;
+  z-index: 1020;
   padding: 0 0 0 30px;
   display: grid;
   grid-template-columns: auto 60px;
@@ -209,15 +211,15 @@ section.main-section {
 
 .page-header {
   text-align: center;
-  background: #EAEAEA;
 }
 .page-header__banner {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-  background: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 64px;
+  position: relative;
+  z-index: 20;
 }
 @media screen and (min-width: 767px) {
   .page-header__banner {
@@ -231,7 +233,6 @@ section.main-section {
 }
 .page-header__banner__logo {
   height: 36px;
-  margin: auto;
 }
 .page-header__banner__title {
   display: none;
@@ -247,7 +248,10 @@ section.main-section {
   line-height: 50px;
   height: 50px;
   color: #353535;
+  background: #EAEAEA;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 10;
 }
 .page-header__location__icon {
   margin-right: 17px;
@@ -304,7 +308,7 @@ section.main-section {
   font-weight: 500;
   font-size: 14px;
   margin-right: -12px;
-  z-index: 2;
+  z-index: 1;
 }
 .process__button__description {
   text-align: left;
@@ -324,11 +328,11 @@ section.main-section {
   display: grid;
   grid-template-columns: 1fr;
   gap: 18px;
+  max-width: 1080px;
+  margin: 0 auto;
 }
 @media screen and (min-width: 767px) {
   .restaurants-list__inner {
-    max-width: 1080px;
-    margin: 0 auto;
     grid-template-columns: repeat(2, 1fr);
     gap: 50px 100px;
   }
@@ -428,18 +432,21 @@ section.main-section {
   }
 }
 .restaurant__header {
-  background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
   background-size: cover;
   background-position: center center;
   padding-top: 275px;
 }
-.restaurant__header__cover {
-  display: none;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 275px;
-  width: 100%;
-  overflow: hidden;
+.restaurant__header--a-la-francaise {
+  background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+.restaurant__header--la-palette-du-gout {
+  background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+.restaurant__header--le-delice-des-sens {
+  background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+.restaurant__header--la-note-enchantee {
+  background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
 }
 .restaurant__header__title {
   border-radius: 40px 40px 0 0;

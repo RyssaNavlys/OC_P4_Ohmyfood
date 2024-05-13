@@ -1,12 +1,15 @@
+// section restaurants-list
+// ########################
+
 
 .restaurants-list {
-    &__inner {
+    &__inner { // inner needed to keep background on full width but restrain content with max-width
         display: grid;
         grid-template-columns: 1fr;
         gap: 18px;
+        max-width: 1080px;
+        margin: 0 auto;
         @media screen and (min-width: $breakpoint_mobile) {
-            max-width: 1080px;
-            margin: 0 auto;
             grid-template-columns: repeat(2, 1fr);
             gap: 50px 100px;
         }
@@ -30,7 +33,7 @@
                 text-align: center;
                 padding: 7px 9px;
                 border-radius: 2px;
-                z-index: 20;
+                z-index: 20; // show in front af img
             }
             &__img {
                 grid-row: 1 / span 2;
