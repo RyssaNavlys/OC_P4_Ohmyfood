@@ -553,7 +553,6 @@ section.main-section {
 .restaurant__menu__part__receipe__price-and-checked__checked {
   grid-column: 2/span 1;
   grid-row: 1/span 2;
-  transition: ease 0.3s;
   display: flex;
   justify-content: center;
   align-items: center;
